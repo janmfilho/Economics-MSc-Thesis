@@ -718,7 +718,7 @@ ggplot(data = dataamsappt22, mapping = aes(x = year, y = obj_hid_TRANSACTIEPRIJS
 
 # 6.1 Remove NA values
 
-```{r checkforbalance, echo=FALSE}
+```{r removenavalues, echo=FALSE}
 
 # Clean NA values in m2 variable
 
@@ -728,7 +728,7 @@ dataamsappt33 <- dplyr::filter(dataamsappt22, !is.na(obj_hid_M2))
 
 # 6.1 Check for balance between control and treatment groups
 
-Is the variance of our covatiates equal among treatment and control groups?
+Is the variance of our covariates equal among treatment and control groups?
 
 ```{r checkforbalance, echo=FALSE}
 
