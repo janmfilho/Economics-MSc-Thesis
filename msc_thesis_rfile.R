@@ -518,7 +518,7 @@ sd(dataamsappt22$obj_hid_TRANSACTIEPRIJS)
 hist(dataamsappt22$obj_hid_TRANSACTIEPRIJS,
      xlab="Transaction Price", main="")
 
-# Transaction Price x M²
+# Transaction Price x MÂ²
 
 regpm2 <- lm(log1p(obj_hid_TRANSACTIEPRIJS) ~ obj_hid_M2, data = dataamsappt22)
 summary(regpm2)
@@ -855,7 +855,7 @@ m5coeffs <- data.frame(summary(regapptlog6factorsc))
 
 # 8.1 Within Metro line 52
 
-# Clean m² variables
+# Clean mÂ² variables
 
 dataamsappt34 <- dplyr::filter(dataamsappt3, !is.na(obj_hid_M2))
 
@@ -997,3 +997,5 @@ stargazer(regapptlog2factors, regapptlog3factors, regapptlog4factors, regapptlog
 stargazer(corrmatix2, title = "Correlation Matrix")
 
 ```
+
+# End
