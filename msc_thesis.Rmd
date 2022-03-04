@@ -189,7 +189,7 @@ Mutate zero observations related to the variable m² = Transform them into missi
 
 # Mutate zero value to missing values
 
-dataamsappt2$obj_hid_M2[dataamsappt2$obj_hid_M2 == "0"] <-"NA"
+dataamsappt2$obj_hid_M2[dataamsappt2$obj_hid_M2 == "0"] <-NA
 
 dataamsappt2$obj_hid_M2 <- as.numeric(dataamsappt2$obj_hid_M2)
 
@@ -219,9 +219,9 @@ table(dataamsappt2$year)
 
 # Remove observations before 2009
 
-dataamsappt2$year[dataamsappt2$year == 2006] <-"NA"
-dataamsappt2$year[dataamsappt2$year == 2007] <-"NA"
-dataamsappt2$year[dataamsappt2$year == 2008] <-"NA"
+dataamsappt2$year[dataamsappt2$year == 2006] <-NA
+dataamsappt2$year[dataamsappt2$year == 2007] <-NA
+dataamsappt2$year[dataamsappt2$year == 2008] <-NA
 
 table(dataamsappt2$year)
 
