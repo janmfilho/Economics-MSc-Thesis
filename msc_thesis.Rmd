@@ -433,7 +433,7 @@ ggplot(data = dataamsappt2, mapping = aes(x = metrolinesouth, y = obj_hid_TRANSA
 
 ```
 
-# 4.6 Geocode my data - Adress variable
+# 4.6 Geocode my data - Address variable
 
 ```{r address, echo=FALSE}
 
@@ -711,7 +711,6 @@ dataamsappt22$year <- as.factor(dataamsappt22$year)
 ggplot(data = dataamsappt22, mapping = aes(x = year, y = obj_hid_TRANSACTIEPRIJS)) +
   geom_boxplot() + xlab("Years") + ylab("Transaction Price")
 
-
 ```
 
 # 6. D-i-D Assumptions
@@ -843,7 +842,6 @@ ggplot(dataamsappt22, aes(registrationdate2, obj_hid_TRANSACTIEPRIJS, col = metr
 # Within 1 km Treatment - Monthly
 
 ggplot(dataamsappt22, aes(registrationdate2, obj_hid_TRANSACTIEPRIJS, col = metrolinetreatmentnorth, group = metrolinetreatmentnorth)) + stat_summary(fun=mean, geom = 'line') + theme_minimal() + theme_minimal() + xlab("Month/Year") + ylab("Transaction Price") + geom_vline(xintercept = "2018-07", linetype="dashed", size=1) + labs(color = "metroline")
-
 
 ```
 
@@ -979,7 +977,7 @@ m5coeffs <- data.frame(summary(regapptlog6factorsc))
 
 ```
 
-# 8. Robustness testss
+# 8. Robustness tests
 
 # 8.1 Within Metro line 52
 
@@ -1026,7 +1024,6 @@ ggplot(dataamsappt34, aes(registrationdate2, obj_hid_TRANSACTIEPRIJS, col = metr
 # Within 1 km Treatment - Monthly
 
 ggplot(dataamsappt44, aes(registrationdate2, obj_hid_TRANSACTIEPRIJS, col = metrolinetreatment52north, group = metrolinetreatment52north)) + stat_summary(fun=mean, geom = 'line') + theme_minimal() + theme_minimal() + xlab("Month/Year") + ylab("Transaction Price") + geom_vline(xintercept = "2018-07", linetype="dashed", size=1) + labs(color = "metroline")
-
 
 ```
 
@@ -1135,4 +1132,3 @@ stargazer(regapptlog2factors, regapptlog3factors, regapptlog4factors, regapptlog
 stargazer(corrmatix2, title = "Correlation Matrix")
 
 ```
-
